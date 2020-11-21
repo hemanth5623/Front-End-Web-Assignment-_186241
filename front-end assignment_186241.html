@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saarthi</title>
+  <link rel="stylesheet" href="assignment_styling.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<h2>New Hiring Details</h2>
+<!--modal for creating a pop-up form-->
+<button class="add" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">New Employee</button>
+<br>
+<br>
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <form id= "addForm" class="modal-content animate" method="post">
+
+    <div class="container">
+      <label for="name"><b>Name</b></label>
+      <input id= "name" type="text" placeholder="Enter Employee name" name="name" required>
+
+      <label for="Employee Id"><b>Employee Id</b></label>
+      <input id= "empId" type="text" placeholder="Enter Employee Id" name="Employee Id" required>
+
+      <label for="Department"><b>Department</b></label>
+      <input type="text" list="Departments" name="Department" placeholder="Department" id="Department" required>
+       <datalist id="Departments">
+        <option value="Deep Learning">
+        <option value="Front End">
+        <option value="Back End">
+        <option value="Management">
+        <option value="Marketing">
+       </datalist>
+       <br>
+
+
+      <label for="Email Id"><b>Email Id</b></label>
+      <input id ="emaId" type="email" placeholder="Enter Email Id" name="Email Id" required>
+
+      <label for="DOJ"><b>Date of Joining</b></label>
+      <input id= "doj" type="date" placeholder="Select Date of Joining" name="DOJ" required>
+      <br>
+<br>
+      <button id= "submitBtn" class="submit" type="submit">Submit</button>
+
+      <button type="reset" class="cancelbtn">Clear</button>
+    </div>
+
+    </div>
+  </form>
+  <!--Creating a table with headers fixed and dynamic rows-->
+    <div class="table-wrapper">
+    <table class="table">
+     <thead id="table-head" style="display: none;">
+      <tr>
+       <th scope="col">Name</th>
+       <th scope="col">EmployeeId</th>
+       <th scope="col">Department</th>
+       <th scope="col">EmailId</th>
+       <th scope="col">DateofJoining</th>
+       <th scope="col" style="background-color:white;border:none;">Action</th>
+      </tr>
+     </thead>
+     <tbody id="myTable">
+     </tbody>
+    </table>
+  </div>
+  
+  <script src="front-end assignment_186241.js"></script>
+
+</body>
+</html>
